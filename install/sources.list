@@ -1,4 +1,5 @@
 
 deb http://mirrors.aliyun.com/raspbian/raspbian/ wheezy main non-free contrib
 deb-src http://mirrors.aliyun.com/raspbian/raspbian/ wheezy main non-free contrib
+deb http://mirrordirector.raspbian.org/raspbian/ jessie main contrib non-free rpi
 
