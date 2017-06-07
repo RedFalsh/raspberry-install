@@ -1,8 +1,8 @@
 #!/bin/bash
 
 echo -e '\033[32m 更新和升级软件\033[0m'
-apt-get update
-apt-get upgrade
+# apt-get update
+# apt-get upgrade
 
 echo -e '\033[32m 打开ssh服务\033[0m'
 service ssh start
