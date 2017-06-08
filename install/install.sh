@@ -30,7 +30,7 @@ sudo insserv /etc/init.d/asplashscreen
 echo -e '\033[32m 安装python3-pyqt5\033[0m'
 sudo apt-get install python3-pyqt5
 
-echo -e '\033[32m 安装python3-pyqt5\033[0m'
+echo -e '\033[32m 安装python3-configobj\033[0m'
 sudo python3 -m pip install configobj
 
 # echo -e '\033[33m 安装cx-freeze\033[0m'
@@ -53,10 +53,12 @@ git clone https://git.coding.net/xiongbigboss/nt2000_in.git
 
 echo -e '\033[33m install nt2000\033[0m'
 cd nt2000_in
+git checkout nokey-1
 python3 config.py
+cd ..
 
-echo -e '\033[33m git clone https://git.coding.net/xiongbigboss/PersonalDose.git\033[0m'
-git clone https://git.coding.net/xiongbigboss/PersonalDose.git
+# echo -e '\033[33m git clone https://git.coding.net/xiongbigboss/PersonalDose.git\033[0m'
+# git clone https://git.coding.net/xiongbigboss/PersonalDose.git
 
 cd qtawesome
 echo -e '\033[33m sudo python3 setup.py install\033[0m'
