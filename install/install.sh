@@ -1,5 +1,4 @@
 #!/bin/bash
-pwd=$echo pwd
 
 # echo -e '\033[32m 更新和升级软件\033[0m'
 # apt-get update
@@ -69,5 +68,6 @@ echo -e '\033[33m sudo python3 setup.py install\033[0m'
 sudo python3 setup.py install
 cd ..
 cd ..
-
-mv git/ $pwd/nt
+pwd
+# pwd=$echo pwd
+# mv git/ $pwd/nt
