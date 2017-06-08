@@ -38,6 +38,7 @@ sudo python3 -m pip install configobj
 echo -e '\033[33m 安装pyinstaller\033[0m'
 sudo python3 -m pip install pyinstaller
 
+rm -r git
 mkdir git
 cd git
 
