@@ -1,11 +1,9 @@
 #!/bin/bash
+pwd=$echo pwd
 
-echo -e '\033[32m 更新和升级软件\033[0m'
+# echo -e '\033[32m 更新和升级软件\033[0m'
 # apt-get update
 # apt-get upgrade
-echo -e '\033[33m \033[0m'
-echo -e '\033[33m \033[0m'
-echo -e '\033[33m \033[0m'
 
 echo -e '\033[32m 打开ssh服务\033[0m'
 service ssh start
@@ -34,7 +32,12 @@ sudo apt-get install python3-pyqt5
 
 echo -e '\033[32m 安装python3-pyqt5\033[0m'
 sudo python3 -m pip install configobj
+
+# echo -e '\033[33m 安装cx-freeze\033[0m'
+# sudo python3 -m pip install cx-freeze
 # sudo pip3 install configobj
+echo -e '\033[33m 安装pyinstaller\033[0m'
+sudo python3 -m pip install pyinstaller
 
 mkdir git
 cd git
@@ -48,6 +51,10 @@ git clone https://git.coding.net/xiongbigboss/qtawesome.git
 echo -e '\033[33m git clone https://git.coding.net/xiongbigboss/nt2000_in.git\033[0m'
 git clone https://git.coding.net/xiongbigboss/nt2000_in.git
 
+echo -e '\033[33m install nt2000\033[0m'
+cd nt2000_in
+python3 config.py
+
 echo -e '\033[33m git clone https://git.coding.net/xiongbigboss/PersonalDose.git\033[0m'
 git clone https://git.coding.net/xiongbigboss/PersonalDose.git
 
@@ -60,3 +67,5 @@ echo -e '\033[33m sudo python3 setup.py install\033[0m'
 sudo python3 setup.py install
 cd ..
 cd ..
+
+mv git/ $pwd/nt
