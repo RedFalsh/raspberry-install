@@ -25,6 +25,8 @@ sudo chmod a+x /etc/init.d/asplashscreen
 echo -e '\033[33m sudo insserv /etc/init.d/asplashscreen\033[0m'
 sudo insserv /etc/init.d/asplashscreen
 
+echo -e '\033[32m 安装fbi，修改桌面背景图片\033[0m'
+cp splash.png /usr/share/pixel-wallpaper/road.jpg
 
 echo -e '\033[32m 安装python3-pyqt5\033[0m'
 sudo apt-get install python3-pyqt5
@@ -70,5 +72,7 @@ sudo python3 setup.py install
 cd ..
 cd ..
 pwd
+
+reboot
 # pwd=$echo pwd
 # mv git/ $pwd/nt
