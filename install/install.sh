@@ -4,14 +4,18 @@
 # apt-get update
 # apt-get upgrade
 
-echo -e '\033[32m 打开ssh服务\033[0m'
-service ssh start
+echo -e '\033[32m 设置开机启动ssh服务\033[0m'
+sudo systemctl enable ssh
+sudo systemctl start ssh
+
+echo -e '\033[32m 关闭bluetooth\033[0m'
+sudo systemctl stop bluetooth
 
 echo -e '\033[32m 修改阿里云源\033[0m'
 echo -e '\033[33m cp /etc/apt/sources.list /etc/apt/sources.list.bk\033[0m'
-cp /etc/apt/sources.list /etc/apt/sources.list.bk
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bk
 echo -e '\033[33m cp sources.list /etc/apt/sources.list\033[0m'
-cp sources.list /etc/apt/sources.list
+sudo cp sources.list /etc/apt/sources.list
 
 echo -e '\033[32m 安装fbi，修改开机图片\033[0m'
 echo -e '\033[33m apt-get install fbi\033[0m'
@@ -27,6 +31,15 @@ sudo insserv /etc/init.d/asplashscreen
 
 echo -e '\033[32m 安装fbi，修改桌面背景图片\033[0m'
 cp splash.png /usr/share/pixel-wallpaper/road.jpg
+
+echo -e '\033[32m 删除开机左上角logo\033[0m'
+cp cmdline.txt /boot/cmdline.txt
+
+echo -e '\033[32m 取消屏幕进入休眠模式\033[0m'
+cp lightdm.conf /etc/lightdm/lightdm.conf
+
+echo -e '\033[32m 修改键盘布局文件/etc/default/keyboard \033[0m'
+cp keyboard /etc/default/keyboard
 
 echo -e '\033[32m 安装python3-pyqt5\033[0m'
 sudo apt-get install python3-pyqt5
